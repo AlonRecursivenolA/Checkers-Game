@@ -1,0 +1,158 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  margin: 0;
+  background-image: url('../imgs/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#games-container {
+  max-height: 100vh; /* or some fixed height */
+  /* optional styling, e.g. padding, background-color, etc. */
+  margin-top: 140px;
+}
+.game-instance {
+  border: 2px solid #000;
+  margin: 1rem;
+  display: block; 
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center; 
+  margin-bottom: 10px;     
+  padding: 10px 20px;
+}
+.game-controls .game-button {
+  margin: 0 5px; 
+}
+.game-button{
+  font-size: 20px;
+  cursor: pointer;
+  background-image: url('../imgs/softbutton.jpg');
+  
+}
+.game-button:hover{
+  border: solid brown 3px;
+}
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.checkers-board {
+  border: 5px solid black;
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px);
+  /* margin-top: 50px; */
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  position: relative;
+}
+
+.white-piece-img, .black-piece-img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-size: cover;
+}
+.black-piece-img, .white-piece-img, .white-king, .black-king, .burned-piece{
+  z-index: 2;
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%; 
+  background-size: cover; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+.black-piece-img{
+  background-image: url('../imgs/blackPiece.png');
+}
+.white-piece-img{
+  background-image: url('../imgs/whitePiece.png');
+}
+
+.white-tile, .black-tile{
+  position: relative;
+  z-index: 1;  
+}
+.black-tile{
+  background-image: url('../imgs/blackMarble.jpg');
+}
+.white-tile{
+  background-image: url('../imgs/WhiteMarble.jpg');
+}
+.white-king{
+  background-image: url('../imgs/whiteKing.png');
+}
+.black-king{
+  background-image: url('../imgs/blackKing.png');
+}
+.remove-background {
+  background-image: none;
+}
+.burned-piece {
+  background-image: url('../imgs/burned.png');
+}
+#new-game-button{
+  position: absolute;
+  top: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url('../imgs/softbutton.jpg');
+}
+#new-game-button:hover{
+  border: solid brown 3px;
+  z-index: 4;
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal container styling */
+.modal-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Modal buttons styling */
+.modal-button {
+  margin: 10px;
+  width: 80px;
+  height: 60px;
+  font-size: 18px;
+  background-image: url('../imgs/softbutton.jpg');
+
+}

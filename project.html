@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./project.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Checkers Board</title>
+
+</head>
+<body>
+  <div class="game-container">
+    <div class="controls">
+      <h2 id="turn-display" class="turn-display" style="font-size: 29;"></h2>
+      <button id="start-button" class="game-button font buttons">Start Game</button>
+      <button id="resign-button" class="game-button display-none font buttons">Resign</button>
+      <button id="draw-button" class="game-button display-none font buttons">Offer Draw</button>
+    </div>
+    <div class="flexbox-container" id="board-container"></div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h2></h2>
+      <p>Would You Like To Accept It?</p>
+      <button id="agreeModal" class="game-button font buttons">Yes</button>
+      <button id="closeModal" class="game-button font buttons">No</button>
+    </div>
+  </div> 
+
+  <div id="gameoverModal" class="modal display-none font">
+    <div class="modal-content" id="gameoverID">
+      <h2>hey</h2>
+      <h3>Restart Game?</h3>
+      <button id="restart-button" class="game-button font buttons">Start New Game</button>
+    </div>
+  </div> 
+  <script src="./project.js"></script>
+</body>
+</html>
